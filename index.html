@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Отделка парных под ключ — вагонка, утепление, полки</title>
+  <meta name="description" content="Отделка парных и саун под ключ: вагонка, утепление, полки, свет, двери. Прозрачные цены и портфолио. Оставьте заявку — рассчитаем стоимость." />
+
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --card:#111a2a;
+      --text:#f3f6ff;
+      --muted:#b7c2da;
+      --brand:#ffcc66;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 18px 40px rgba(0,0,0,.35);
+      --radius:16px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 10%, rgba(255,204,102,.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 15%, rgba(122,185,255,.14), transparent 60%),
+        linear-gradient(180deg, #070a12, var(--bg));
+      line-height:1.45;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,18,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:800;
+      letter-spacing:.2px;
+    }
+    .badge{
+      width:12px; height:12px; border-radius:50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 6px rgba(255,204,102,.15);
+    }
+    .nav{display:flex; gap:14px; flex-wrap:wrap; color:var(--muted); font-weight:600; font-size:14px}
+    .nav a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px; border-radius:12px;
+      font-weight:750; border:0; cursor:pointer;
+      transition: transform .08s ease, filter .2s ease;
+      user-select:none;
+    }
+    .btn:active{transform: translateY(1px)}
+    .btn-primary{background: var(--brand); color:#1a1205}
+    .btn-ghost{
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      border:1px solid var(--line);
+    }
+    .hero{padding:44px 0 8px}
+    .grid{display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:stretch}
+    @media (max-width: 920px){.grid{grid-template-columns:1fr}}
+    h1{margin:10px 0 12px; font-size: clamp(28px, 4vw, 46px); line-height:1.08}
+    .lead{margin:0; color:var(--muted); font-size: clamp(15px, 1.6vw, 18px); max-width: 62ch}
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .chip{
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .card{
+      background: rgba(17,26,42,.78);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .quote{
+      padding:18px;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .quote h3{margin:0}
+    label{font-size:13px; color:var(--muted)}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color:var(--text);
+      outline:none;
+    }
+    input:focus, textarea:focus{border-color: rgba(255,204,102,.65)}
+    textarea{min-height:92px; resize:vertical}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media (max-width: 520px){.row{grid-template-columns:1fr}}
+    .fine{font-size:12px; color:var(--muted)}
+    section{padding:22px 0}
+    .section-title{display:flex; justify-content:space-between; gap:14px; align-items:flex-end; margin-bottom:12px}
+    .section-title h2{margin:0; font-size: clamp(20px, 2.3vw, 28px)}
+    .section-title p{margin:0; color:var(--muted)}
+    .features{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px}
+    @media (max-width: 920px){.features{grid-template-columns:1fr}}
+    .feature{padding:16px}
+    .feature b{display:block; margin-bottom:6px}
+    .feature p{margin:0; color:var(--muted)}
+    .pricegrid{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px}
+    @media (max-width: 920px){.pricegrid{grid-template-columns:1fr}}
+    .price{padding:16px}
+    .price .tag{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--line); color:var(--muted); font-size:12px}
+    .price h3{margin:10px 0 6px}
+    .price ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .price .sum{margin-top:12px; font-size:20px; font-weight:850}
+
+    .gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px}
+    @media (max-width: 920px){.gallery{grid-template-columns:1fr}}
+    .shot{overflow:hidden}
+
+    .cta{
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:12px; align-items:stretch;
+      padding:16px;
+    }
+    @media (max-width: 920px){.cta{grid-template-columns:1fr}}
+    .cta h3{margin:0 0 6px}
+    .cta p{margin:0; color:var(--muted)}
+    .footer{
+      padding:22px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .toast{
+      position: fixed; right: 16px; bottom: 16px; max-width: 360px;
+      padding: 12px 14px; border-radius: 14px;
+      background: rgba(17,26,42,.92);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display:none;
+    }
+    .toast.show{display:block}
+    .muted{color:var(--muted)}
+
+    /* --- Portfolio slider (3 фото + листание) --- */
+    .slider{
+      position: relative;
+      overflow: hidden;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+    .slides{
+      display: flex;
+      transition: transform .35s ease;
+      will-change: transform;
+    }
+    .slides img{
+      width: 100%;
+      flex: 0 0 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+    .slider .nav{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.35);
+      color: #fff;
+      font-size: 26px;
+      line-height: 36px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .slider .nav.prev{left: 10px}
+    .slider .nav.next{right: 10px}
+    .slider .dots{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+    }
+    .slider .dot{
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.18);
+      cursor: pointer;
+      padding: 0;
+    }
+    .slider .dot.active{
+      background: rgba(255,204,102,.95);
+      border-color: rgba(255,204,102,.95);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand"><span class="badge"></span> Отделка парных</div>
+      <nav class="nav">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="btn btn-primary" href="#calc">Рассчитать стоимость</a>
+    </div>
+  </div>
+
+  <header class="wrap hero">
+    <div class="grid">
+      <div>
+        <div class="muted" style="font-weight:650;">Отделка парных и саун под ключ</div>
+        <h1>Тёплая, безопасная парная: вагонка, утепление, полки, свет — аккуратно и по смете</h1>
+        <p class="lead">
+          Делаем отделку парных в банях и саунах. Подберём материалы (липа/осина/термо), рассчитаем объём работ,
+          соберём полки и укроем узлы так, чтобы служило долго.
+        </p>
+        <div class="chips">
+          <span class="chip">Смета перед стартом</span>
+          <span class="chip">Материалы + монтаж</span>
+          <span class="chip">Аккуратные примыкания</span>
+          <span class="chip">Гарантия на работы</span>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+          <a class="btn btn-primary" href="#calc">Оставить заявку</a>
+          <a class="btn btn-ghost" href="#portfolio">Посмотреть работы</a>
+        </div>
+      </div>
+
+      <div class="card" id="calc">
+        <form class="quote" onsubmit="return submitLead(event)">
+          <h3>Быстрый расчёт</h3>
+          <div class="fine">Напишите размеры парной и что нужно: полки/вагонка/утепление</div>
+
+          <div class="row">
+            <div>
+              <label>Имя</label>
+              <input required name="name" placeholder="Иван" />
+            </div>
+            <div>
+              <label>Телефон / Telegram</label>
+              <input required name="contact" placeholder="+7… или @username" />
+            </div>
+          </div>
+
+          <div>
+            <label>Описание (размеры, пожелания)</label>
+            <textarea name="message" placeholder="Например: 2.2×2.0×2.2, полки Г-образные, липа, подсветка"></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Получить расчёт</button>
+          <div class="fine">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="services">
+      <div class="section-title">
+        <h2>Что делаем</h2>
+        <p></p>
+      </div>
+      <div class="features">
+        <div class="card feature">
+          <b>Утепление и пароизоляция</b>
+          <p>Фольга/мембрана, проклейка, контробрешётка — чтобы держало тепло.</p>
+        </div>
+        <div class="card feature">
+          <b>Обшивка вагонкой</b>
+          <p>Липа/осина/кедр/термо. Аккуратные углы и примыкания.</p>
+        </div>
+        <div class="card feature">
+          <b>Полки и лежаки</b>
+          <p>Прямые/Г-образные/ступенчатые. Шлифовка, безопасные кромки.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices">
+      <div class="section-title">
+        <h2>Стоимость работ</h2>
+        <p></p>
+      </div>
+
+      <div class="pricegrid">
+        <div class="card price">
+          <span class="tag"></span>
+          <h3>Базовый</h3>
+          <div class="muted">Утепление + обшивка</div>
+          <ul>
+            <li>Пароизоляция/фольга</li>
+            <li>Обрешётка</li>
+            <li>Вагонка стены/потолок</li>
+          </ul>
+          <div class="sum">от 1 200 ₽/м²</div>
+          <div class="fine"></div>
+        </div>
+
+        <div class="card price">
+          <span class="tag"></span>
+          <h3>Стандарт</h3>
+          <div class="muted">Базовый + полки</div>
+          <ul>
+            <li>Полки (1–2 уровня)</li>
+            <li>Защитные экраны/углы</li>
+            <li>Примыкания и герметизация</li>
+          </ul>
+          <div class="sum">от 45 000 ₽</div>
+          <div class="fine">за парную до ~6–8 м²</div>
+        </div>
+
+        <div class="card price">
+          <span class="tag"></span>
+          <h3>Премиум</h3>
+          <div class="muted">Стандарт + свет/детали</div>
+          <ul>
+            <li>Подсветка (ниша/полки)</li>
+            <li>Термодерево/скрытый крепёж</li>
+            <li>Дверь/фурнитура (по запросу)</li>
+          </ul>
+          <div class="sum">от 75 000 ₽</div>
+          <div class="fine">итог зависит от материалов</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="section-title">
+        <h2>Портфолио</h2>
+        <p></p>
+      </div>
+
+      <div class="gallery">
+
+        <!-- Работа 1 -->
+        <div class="card shot">
+          <div class="slider" data-slider>
+            <div class="slides" data-slides>
+              <img src="img/p1-1.jpg" alt="Парная 1 фото 1">
+              <img src="img/p1-2.jpg" alt="Парная 1 фото 2">
+              <img src="img/p1-3.jpg" alt="Парная 1 фото 3">
+            </div>
+            <button class="nav prev" type="button" data-prev aria-label="Предыдущее фото">‹</button>
+            <button class="nav next" type="button" data-next aria-label="Следующее фото">›</button>
+            <div class="dots" data-dots></div>
+          </div>
+          <div class="cap"><b>Парная 2,5×3,5 м</b> · ольха · полки Г-образные · подсветка · панно · <b>≈ 1 360 000 ₽</b></div>
+        </div>
+
+        <!-- Работа 2 -->
+        <div class="card shot">
+          <div class="slider" data-slider>
+            <div class="slides" data-slides>
+              <img src="img/p2-1.jpg" alt="Парная 2 фото 1">
+              <img src="img/p2-2.jpg" alt="Парная 2 фото 2">
+              <img src="img/p2-3.jpg" alt="Парная 2 фото 3">
+            </div>
+            <button class="nav prev" type="button" data-prev aria-label="Предыдущее фото">‹</button>
+            <button class="nav next" type="button" data-next aria-label="Следующее фото">›</button>
+            <div class="dots" data-dots></div>
+          </div>
+          <div class="cap"><b>Парная 2,4×5 м</b> · необрезная доска · подсветка · плитка змеевик · панно · <b>≈ 1 567 000 ₽</b></div>
+        </div>
+
+        <!-- Работа 3 -->
+        <div class="card shot">
+          <div class="slider" data-slider>
+            <div class="slides" data-slides>
+              <img src="img/p3-1.jpg" alt="Парная 3 фото 1">
+              <img src="img/p3-2.jpg" alt="Парная 3 фото 2">
+              <img src="img/p3-3.jpg" alt="Парная 3 фото 3">
+            </div>
+            <button class="nav prev" type="button" data-prev aria-label="Предыдущее фото">‹</button>
+            <button class="nav next" type="button" data-next aria-label="Следующее фото">›</button>
+            <div class="dots" data-dots></div>
+          </div>
+          <div class="cap"><b>Парная 1,8×2,2 м</b> · полок из ольхи 65 мм · полки 2 уровня · панно ·<b>≈ 789 000 ₽</b></div>
+        </div>
+
+      </div>
+
+      <div class="fine" style="margin-top:10px;">
+      </div>
+    </section>
+
+    <section id="contacts">
+      <div class="card cta">
+        <div>
+          <h3>Нужна отделка парной? Напишите — посчитаем по фото</h3>
+          <p>Пришлите размеры и 2–4 фото помещения. Подскажем материалы и дадим смету.</p>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+            <a class="btn btn-primary" href="#calc">Оставить заявку</a>
+            <a class="btn btn-ghost" href="tel:+79850303839">Позвонить</a>
+            <a class="btn btn-ghost" href="https://t.me/infopehkabany" target="_blank" rel="noopener">Telegram</a>
+            <!-- WhatsApp по вашему номеру (если нужен) -->
+            <a class="btn btn-ghost" href="https://wa.me/79850303839" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+
+          <div class="fine" style="margin-top:10px;">
+            Работаем по договорённости · Расчёт по фото/замер
+          </div>
+        </div>
+
+        <div class="card" style="padding:16px; border-color:rgba(255,204,102,.25)">
+          <b>Контакты</b>
+          <div class="muted" style="margin-top:8px;">Телефон: <a href="tel:+79850303839">+7 (985) 030-38-39</a></div>
+          <div class="muted" style="margin-top:6px;">Telegram: <a href="https://t.me/infopehkabany" target="_blank" rel="noopener">@infopehkabany</a></div>
+          <div class="muted" style="margin-top:6px;">Почта: <a href="mailto:info@pehka-rus.ru">info@pehka-rus.ru</a></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Отделка парных. Все права защищены.
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    function showToast(text, isError=false){
+      const t = document.getElementById("toast");
+      t.textContent = text;
+      t.style.borderColor = isError ? "rgba(255,107,107,.55)" : "rgba(255,204,102,.35)";
+      t.classList.add("show");
+      setTimeout(()=>t.classList.remove("show"), 3600);
+    }
+
+    // Заглушка отправки формы (без сервера).
+    function submitLead(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const name = (fd.get("name")||"").trim();
+      const contact = (fd.get("contact")||"").trim();
+      if(!name || !contact){
+        showToast("Заполните имя и контакт для связи.", true);
+        return false;
+      }
+      showToast("Заявка отправлена! Мы свяжемся с вами.");
+      e.target.reset();
+      return false;
+    }
+
+    // Слайдеры в портфолио (кнопки + точки + свайп)
+    (function initSliders(){
+      const sliders = document.querySelectorAll('[data-slider]');
+
+      sliders.forEach((slider) => {
+        const track = slider.querySelector('[data-slides]');
+        const slides = Array.from(track.querySelectorAll('img'));
+        const btnPrev = slider.querySelector('[data-prev]');
+        const btnNext = slider.querySelector('[data-next]');
+        const dotsWrap = slider.querySelector('[data-dots]');
+
+        let index = 0;
+
+        dotsWrap.innerHTML = slides.map((_, i) =>
+          `<button type="button" class="dot" aria-label="Фото ${i+1}" data-dot="${i}"></button>`
+        ).join('');
+
+        const dots = Array.from(dotsWrap.querySelectorAll('.dot'));
+
+        function render(){
+          track.style.transform = `translateX(-${index * 100}%)`;
+          dots.forEach((d,i)=>d.classList.toggle('active', i === index));
+
+          btnPrev.disabled = index === 0;
+          btnNext.disabled = index === slides.length - 1;
+
+          btnPrev.style.opacity = btnPrev.disabled ? .5 : 1;
+          btnNext.style.opacity = btnNext.disabled ? .5 : 1;
+        }
+
+        function go(delta){
+          index = Math.max(0, Math.min(slides.length - 1, index + delta));
+          render();
+        }
+
+        btnPrev.addEventListener('click', () => go(-1));
+        btnNext.addEventListener('click', () => go(1));
+
+        dotsWrap.addEventListener('click', (e) => {
+          const b = e.target.closest('[data-dot]');
+          if(!b) return;
+          index = Number(b.dataset.dot);
+          render();
+        });
+
+        // swipe (мышь/тач)
+        let startX = null;
+        slider.addEventListener('pointerdown', (e) => {
+          startX = e.clientX;
+          slider.setPointerCapture(e.pointerId);
+        });
+        slider.addEventListener('pointerup', (e) => {
+          if(startX === null) return;
+          const dx = e.clientX - startX;
+          startX = null;
+          if(Math.abs(dx) < 40) return;
+          go(dx < 0 ? 1 : -1);
+        });
+
+        render();
+      });
+    })();
+  </script>
+</body>
+</html>
+
