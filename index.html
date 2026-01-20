@@ -213,7 +213,11 @@
 <body>
   <div class="topbar">
     <div class="wrap topbar-inner">
-      <div class="brand"><span class="badge"></span> Отделка парных</div>
+      <div class="brand">
+        <img src="img/logo.png" alt="Отделка парных" class="logo">
+        <span class="brand-text">Отделка парных</span>
+      </div>
+
       <nav class="nav">
         <a href="#services">Услуги</a>
         <a href="#prices">Цены</a>
@@ -227,7 +231,7 @@
   <header class="wrap hero">
     <div class="grid">
       <div>
-        <div class="muted" style="font-weight:650;">Отделка парных и саун под ключ</div>
+        <div class="muted" ="font-weight:650;">Отделка парных и саун под ключ</div>
         <h1>Тёплая, безопасная парная: вагонка, утепление, полки, свет — аккуратно и по смете</h1>
         <p class="lead">
           Делаем отделку парных в банях и саунах. Подберём материалы (липа/осина/термо/ольха/кедр), рассчитаем объём работ,
@@ -239,7 +243,7 @@
           <span class="chip">Аккуратные примыкания</span>
           <span class="chip">Гарантия на работы</span>
         </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+        <div ="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
           <a class="btn btn-primary" href="#calc">Оставить заявку</a>
           <a class="btn btn-ghost" href="#portfolio">Посмотреть работы</a>
         </div>
@@ -395,7 +399,7 @@
 
       </div>
 
-      <div class="fine" style="margin-top:10px;">
+      <div class="fine" ="margin-top:10px;">
       </div>
     </section>
 
@@ -405,23 +409,23 @@
           <h3>Нужна отделка парной? Напишите — посчитаем по фото</h3>
           <p>Пришлите размеры и 2–4 фото помещения. Подскажем материалы и дадим смету.</p>
 
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+          <div ="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
             <a class="btn btn-primary" href="#calc">Оставить заявку</a>
             <a class="btn btn-ghost" href="tel:+79850303839">Позвонить</a>
             <a class="btn btn-ghost" href="https://t.me/otdelkaparnoy" target="_blank" rel="noopener">Написать в Telegram</a>
             <a class="btn btn-ghost" href="https://wa.me/79850303839" target="_blank" rel="noopener">WhatsApp</a>
           </div>
 
-          <div class="fine" style="margin-top:10px;">
+          <div class="fine" ="margin-top:10px;">
             Работаем по договорённости · Расчёт по фото/замер
           </div>
         </div>
 
-        <div class="card" style="padding:16px; border-color:rgba(255,204,102,.25)">
+        <div class="card" ="padding:16px; border-color:rgba(255,204,102,.25)">
           <b>Контакты</b>
-          <div class="muted" style="margin-top:8px;">Телефон: <a href="tel:+79850303839">+7 (985) 030-38-39</a></div>
-          <div class="muted" style="margin-top:6px;">Telegram: <a href="https://t.me/infopehkabany" target="_blank" rel="noopener">@otdelkaparnoy</a></div>
-          <div class="muted" style="margin-top:6px;">Почта: <a href="mailto:info@pehka-rus.ru">info@otdelkapar.ru</a></div>
+          <div class="muted" ="margin-top:8px;">Телефон: <a href="tel:+79850303839">+7 (985) 030-38-39</a></div>
+          <div class="muted" ="margin-top:6px;">Telegram: <a href="https://t.me/infopehkabany" target="_blank" rel="noopener">@otdelkaparnoy</a></div>
+          <div class="muted" ="margin-top:6px;">Почта: <a href="mailto:info@pehka-rus.ru">info@otdelkapar.ru</a></div>
         </div>
       </div>
     </section>
@@ -439,7 +443,7 @@
     function showToast(text, isError=false){
       const t = document.getElementById("toast");
       t.textContent = text;
-      t.style.borderColor = isError ? "rgba(255,107,107,.55)" : "rgba(255,204,102,.35)";
+      t..borderColor = isError ? "rgba(255,107,107,.55)" : "rgba(255,204,102,.35)";
       t.classList.add("show");
       setTimeout(()=>t.classList.remove("show"), 3600);
     }
@@ -512,7 +516,7 @@
         const dots = Array.from(dotsWrap.querySelectorAll('.dot'));
 
         function render(){
-          track.style.transform = `translateX(-${index * 100}%)`;
+          track..transform = `translateX(-${index * 100}%)`;
           dots.forEach((d,i)=>d.classList.toggle('active', i === index));
 
           btnPrev.disabled = index === 0;
@@ -557,6 +561,7 @@
   </script>
 </body>
 </html>
+
 
 
 
