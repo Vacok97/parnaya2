@@ -38,15 +38,33 @@
       border-bottom:1px solid var(--line);
     }
     .topbar-inner{display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+
+    /* ===== ЛОГОТИП В ШАПКЕ (ВАРИАНТ A: логотип + текст) ===== */
     .brand{
-      display:flex; align-items:center; gap:10px; font-weight:800;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
       letter-spacing:.2px;
     }
-    .badge{
-      width:12px; height:12px; border-radius:50%;
-      background: var(--brand);
-      box-shadow: 0 0 0 6px rgba(255,204,102,.15);
+    .brand-link{display:flex; align-items:center; gap:12px}
+    /* Лого квадратное и с текстом внизу — поэтому "обрезаем" по высоте и показываем верх (круг+веник) */
+    .logo{
+      width:44px;
+      height:44px;
+      object-fit:cover;
+      object-position:center 12%;
+      border-radius:12px;
+      display:block;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
     }
+    .brand-text{white-space:nowrap}
+    @media (max-width: 520px){
+      .brand-text{display:none;} /* на телефоне оставляем только значок, чтобы не теснило меню */
+    }
+
     .nav{display:flex; gap:14px; flex-wrap:wrap; color:var(--muted); font-weight:600; font-size:14px}
     .nav a:hover{color:var(--text)}
     .btn{
@@ -122,7 +140,6 @@
     .gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px}
     @media (max-width: 920px){.gallery{grid-template-columns:1fr}}
     .shot{overflow:hidden}
-
     .cap{padding:12px 14px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
 
     .cta{
@@ -213,8 +230,13 @@
 <body>
   <div class="topbar">
     <div class="wrap topbar-inner">
+
+      <!-- ЛОГОТИП + ТЕКСТ (ВАРИАНТ A) -->
       <div class="brand">
-        <img src="img/logo.png" alt="Отделка парных">
+        <a class="brand-link" href="#top" aria-label="На главную">
+          <img src="img/logo.png" alt="Отделка парных" class="logo">
+          <span class="brand-text">Отделка парных</span>
+        </a>
       </div>
 
       <nav class="nav">
@@ -227,10 +249,12 @@
     </div>
   </div>
 
+  <div id="top"></div>
+
   <header class="wrap hero">
     <div class="grid">
       <div>
-        <div class="muted" ="font-weight:650;">Отделка парных и саун под ключ</div>
+        <div class="muted" style="font-weight:650;">Отделка парных и саун под ключ</div>
         <h1>Тёплая, безопасная парная: вагонка, утепление, полки, свет — аккуратно и по смете</h1>
         <p class="lead">
           Делаем отделку парных в банях и саунах. Подберём материалы (липа/осина/термо/ольха/кедр), рассчитаем объём работ,
@@ -242,7 +266,7 @@
           <span class="chip">Аккуратные примыкания</span>
           <span class="chip">Гарантия на работы</span>
         </div>
-        <div ="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
           <a class="btn btn-primary" href="#calc">Оставить заявку</a>
           <a class="btn btn-ghost" href="#portfolio">Посмотреть работы</a>
         </div>
@@ -363,7 +387,7 @@
             <button class="nav next" type="button" data-next aria-label="Следующее фото">›</button>
             <div class="dots" data-dots></div>
           </div>
-          <div class="cap"><b>Пример работы 1</b> · ольха · полки Г-образные · подсветка · панно · <b>≈ 1 360 000 ₽</b></div>
+          <div class="cap"><b>Пример работы 1</b> · вагонка реечная из ольхи · полки из ольхи · подсветка · панно · <b>≈ 850 000 ₽</b></div>
         </div>
 
         <!-- Работа 2 -->
@@ -378,7 +402,7 @@
             <button class="nav next" type="button" data-next aria-label="Следующее фото">›</button>
             <div class="dots" data-dots></div>
           </div>
-          <div class="cap"><b>Пример работы 2</b> · необрезная доска · подсветка · плитка змеевик · панно · <b>≈ 1 567 000 ₽</b></div>
+          <div class="cap"><b>Пример работы 2</b> · необрезная доска липа · полок из бревна · панно · стиль Леший · <b>≈ 680 000 ₽</b></div>
         </div>
 
         <!-- Работа 3 -->
@@ -393,12 +417,12 @@
             <button class="nav next" type="button" data-next aria-label="Следующее фото">›</button>
             <div class="dots" data-dots></div>
           </div>
-          <div class="cap"><b>Пример работы 3</b> · полок из ольхи 65 мм · полки 2 уровня · панно ·<b>≈ 789 000 ₽</b></div>
+          <div class="cap"><b>Пример работы 3</b> · Потолок доска кело · полки из ольхи · большое панно из сибирского можжевельника · <b>≈ 54 000 ₽</b></div>
         </div>
 
       </div>
 
-      <div class="fine" ="margin-top:10px;">
+      <div class="fine" style="margin-top:10px;">
       </div>
     </section>
 
@@ -408,23 +432,23 @@
           <h3>Нужна отделка парной? Напишите — посчитаем по фото</h3>
           <p>Пришлите размеры и 2–4 фото помещения. Подскажем материалы и дадим смету.</p>
 
-          <div ="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
             <a class="btn btn-primary" href="#calc">Оставить заявку</a>
             <a class="btn btn-ghost" href="tel:+79850303839">Позвонить</a>
             <a class="btn btn-ghost" href="https://t.me/otdelkaparnoy" target="_blank" rel="noopener">Написать в Telegram</a>
             <a class="btn btn-ghost" href="https://wa.me/79850303839" target="_blank" rel="noopener">WhatsApp</a>
           </div>
 
-          <div class="fine" ="margin-top:10px;">
+          <div class="fine" style="margin-top:10px;">
             Работаем по договорённости · Расчёт по фото/замер
           </div>
         </div>
 
-        <div class="card" ="padding:16px; border-color:rgba(255,204,102,.25)">
+        <div class="card" style="padding:16px; border-color:rgba(255,204,102,.25)">
           <b>Контакты</b>
-          <div class="muted" ="margin-top:8px;">Телефон: <a href="tel:+79850303839">+7 (985) 030-38-39</a></div>
-          <div class="muted" ="margin-top:6px;">Telegram: <a href="https://t.me/infopehkabany" target="_blank" rel="noopener">@otdelkaparnoy</a></div>
-          <div class="muted" ="margin-top:6px;">Почта: <a href="mailto:info@pehka-rus.ru">info@otdelkapar.ru</a></div>
+          <div class="muted" style="margin-top:8px;">Телефон: <a href="tel:+79850303839">+7 (985) 030-38-39</a></div>
+          <div class="muted" style="margin-top:6px;">Telegram: <a href="https://t.me/otdelkaparnoy" target="_blank" rel="noopener">@infopehkabany</a></div>
+          <div class="muted" style="margin-top:6px;">Почта: <a href="mailto:info@otdelkapar.ru">info@otdelkapar.ru</a></div>
         </div>
       </div>
     </section>
@@ -442,7 +466,7 @@
     function showToast(text, isError=false){
       const t = document.getElementById("toast");
       t.textContent = text;
-      t..borderColor = isError ? "rgba(255,107,107,.55)" : "rgba(255,204,102,.35)";
+      t.style.borderColor = isError ? "rgba(255,107,107,.55)" : "rgba(255,204,102,.35)";
       t.classList.add("show");
       setTimeout(()=>t.classList.remove("show"), 3600);
     }
@@ -515,7 +539,7 @@
         const dots = Array.from(dotsWrap.querySelectorAll('.dot'));
 
         function render(){
-          track..transform = `translateX(-${index * 100}%)`;
+          track.style.transform = `translateX(-${index * 100}%)`;
           dots.forEach((d,i)=>d.classList.toggle('active', i === index));
 
           btnPrev.disabled = index === 0;
@@ -560,10 +584,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
